@@ -1,22 +1,23 @@
-<div class="container mx-auto bg-yellow-500 p-24">
-    <table class="divide-y divide-gray-300 w-full">
-        <thead class="bg-gray-50">
-            <tr>
-                <th class="py-2 text-xl text-gray-500">
-                    Mã loại
-                </th>
-                <th class="py-2 text-xl text-gray-500">
-                    Tên loại
-                <th class="py-2 text-xl text-gray-500">
-                    Sửa
-                </th>
-                <th class="py-2 text-xl text-gray-500">
-                    Xóa
-                </th>
-            </tr>
-        </thead>
-        <tbody class="bg-white divide-y divide-gray-300">
-            <!-- <tr class="whitespace-nowrap">
+<div class="bg-gray-200">
+    <div class="container mx-auto p-24">
+        <table class="divide-y divide-gray-300 w-full">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="py-2 text-xl text-gray-500">
+                        Mã loại
+                    </th>
+                    <th class="py-2 text-xl text-gray-500">
+                        Tên loại
+                    <th class="py-2 text-xl text-gray-500">
+                        Sửa
+                    </th>
+                    <th class="py-2 text-xl text-gray-500">
+                        Xóa
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-300">
+                <!-- <tr class="whitespace-nowrap">
                 <td class="pl-40 py-4 text-sm text-gray-500">
                     1
                 </td>
@@ -41,15 +42,15 @@
                 </td>
             </tr> -->
 
-            <?php
-            foreach ($list_loaihang as $show) {
-                extract($show);
+                <?php
+                foreach ($list_loaihang as $show) {
+                    extract($show);
 
-                //tao bien sua, xoa
-                $sua_loaihang = "index.php?act=sua_loaihang&ma_loai=" . $ma_loai;
-                $xoa_loaihang = "index.php?act=xoa_loaihang&ma_loai=" . $ma_loai;
-                //
-                echo '
+                    //tao bien sua, xoa
+                    $sua_loaihang = "index.php?act=sua_loaihang&ma_loai=" . $ma_loai;
+                    $xoa_loaihang = "index.php?act=xoa_loaihang&ma_loai=" . $ma_loai;
+                    //
+                    echo '
                 <tr class="whitespace-nowrap">
                 <td class="pl-40 py-4 text-sm text-gray-500">
                     ' . $ma_loai . '
@@ -75,14 +76,15 @@
                 </td>
             </tr>
                 ';
-            }
-            ?>
-        </tbody>
-    </table>
-    <br> <br>
-    <div>
-        <a href="index.php?act=add_loaihang" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded">
-            Nhập thêm
-        </a>
+                }
+                ?>
+            </tbody>
+        </table>
+        <br> <br>
+        <div>
+            <a href="index.php?act=add_loaihang" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded">
+                Nhập thêm
+            </a>
+        </div>
     </div>
 </div>

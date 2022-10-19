@@ -4,6 +4,7 @@ include "../model/loai_hang.php";
 include "../model/san_pham.php";
 include "../model/khach_hang.php";
 include "../model/thong_ke.php";
+include "../model/binh_luan.php";
 
 include "header.php";
 
@@ -199,8 +200,19 @@ if (isset($_GET['act'])) {
 
 
         case 'list_binhluan':
+            $list_bl = load_binhluan();
             include "binh_luan/list.php";
             break;
+
+        case 'xoa_binhluan':
+            if (isset($_GET['ma_bl'])) {
+                $ma_bl = $_GET['ma_bl'];
+                delete_binhluan($ma_bl);
+            }
+            $list_bl = load_binhluan();
+            include "binh_luan/list.php";
+            break;
+
         case 'thong_ke':
             $list_thongke = load_all_thongke();
             include "thong_ke/show.php";

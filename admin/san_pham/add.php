@@ -1,4 +1,5 @@
-<div class="container mx-auto bg-yellow-500 p-24">
+<div class="bg-gray-200">
+<div class="container mx-auto p-24">
     <div class="my-6">
         <?php
         if (isset($msg) && ($msg != "")) {
@@ -63,4 +64,5 @@
             <a href="index.php?act=list_sanpham" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded">Danh sách</a>
         </div>
     </form>
+</div>
 </div>

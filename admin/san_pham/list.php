@@ -1,60 +1,61 @@
-<div class="container mx-auto bg-yellow-500 p-24">
-    <div>
-        <form action="index.php?act=list_sanpham" method="post">
-            <input type="text" name="keyword">
-            <select name="ma_loai">
-                <option value="0" selected>
-                    Tất cả
-                </option>
-                <?php
-                foreach ($list_loaihang as $show) {
-                    extract($show);
-                    echo '
+<div class="bg-gray-200">
+    <div class="container mx-auto p-24">
+        <div>
+            <form action="index.php?act=list_sanpham" method="post">
+                <input type="text" name="keyword">
+                <select name="ma_loai">
+                    <option value="0" selected>
+                        Tất cả
+                    </option>
+                    <?php
+                    foreach ($list_loaihang as $show) {
+                        extract($show);
+                        echo '
                         <option value="' . $ma_loai . '">
                             ' . $ten_loai . '
                         </option>
                     ';
-                }
-                ?>
-            </select>
-            <button type="submit" name="filter_list" class="bg-green-500 hover:bg-green-700 text-white font-bold px-4 my-2 rounded">
-                Tìm kiếm
-            </button>
-        </form>
-        <table class="table-auto border-separate border border-green-900">
-            <thead>
-                <tr>
-                    <th class="border border-green-600">Mã sản phẩm</th>
-                    <th class="border border-green-600">Tên sản phẩm</th>
-                    <th class="border border-green-600">Đơn giá</th>
-                    <th class="border border-green-600">Hình</th>
-                    <th class="border border-green-600">Mô tả</th>
-                    <th class="border border-green-600">Mô tả ngắn</th>
-                    <th class="border border-green-600">Số lượt xem</th>
-                    <th class="border border-green-600">Loại hàng</th>
-                    <th class="border border-green-600">Sửa</th>
-                    <th class="border border-green-600">Xóa</th>
-                </tr>
-            </thead>
-            <tbody>
-
-                <?php foreach ($list_sanpham as $show) {
-
-
-                    extract($show);
-                    //tao bien sua, xoa
-                    $sua_sanpham = "index.php?act=sua_sanpham&ma_hh=" . $ma_hh;
-                    $xoa_sanpham = "index.php?act=xoa_sanpham&ma_hh=" . $ma_hh;
-
-                    $img = "./upload/" . $hinh;
-                    if (is_file($img)) {
-                        $image = "<img src = '" . $img . "'>";
-                    } else {
-                        $image = "Khong co hinh";
                     }
+                    ?>
+                </select>
+                <button type="submit" name="filter_list" class="bg-green-500 hover:bg-green-700 text-white font-bold px-4 my-2 rounded">
+                    Tìm kiếm
+                </button>
+            </form>
+            <table class="table-auto border-separate border border-green-900">
+                <thead>
+                    <tr>
+                        <th class="border border-green-600">Mã sản phẩm</th>
+                        <th class="border border-green-600">Tên sản phẩm</th>
+                        <th class="border border-green-600">Đơn giá</th>
+                        <th class="border border-green-600">Hình</th>
+                        <th class="border border-green-600">Mô tả</th>
+                        <th class="border border-green-600">Mô tả ngắn</th>
+                        <th class="border border-green-600">Số lượt xem</th>
+                        <th class="border border-green-600">Loại hàng</th>
+                        <th class="border border-green-600">Sửa</th>
+                        <th class="border border-green-600">Xóa</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                    // 
-                    echo '
+                    <?php foreach ($list_sanpham as $show) {
+
+
+                        extract($show);
+                        //tao bien sua, xoa
+                        $sua_sanpham = "index.php?act=sua_sanpham&ma_hh=" . $ma_hh;
+                        $xoa_sanpham = "index.php?act=xoa_sanpham&ma_hh=" . $ma_hh;
+
+                        $img = "./upload/" . $hinh;
+                        if (is_file($img)) {
+                            $image = "<img src = '" . $img . "'>";
+                        } else {
+                            $image = "Khong co hinh";
+                        }
+
+                        // 
+                        echo '
                     <tr>
                         <td class="border border-green-600">
                             ' . $ma_hh . '
@@ -98,15 +99,16 @@
                         </td>
                     </tr>
                     ';
-                }
-                ?>
-            </tbody>
-        </table>
-    </div>
-    <br> <br>
-    <div>
-        <a href="index.php?act=add_sanpham" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded">
-            Nhập thêm
-        </a>
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+        <br> <br>
+        <div>
+            <a href="index.php?act=add_sanpham" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded">
+                Nhập thêm
+            </a>
+        </div>
     </div>
 </div>

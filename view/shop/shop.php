@@ -37,7 +37,7 @@
                     </form>
                 </div> -->
 
-                <div class="grid grid-cols-4 gap-10">
+                <div class="grid grid-cols-3 gap-10">
                     <?php
                     foreach ($list_all_shop as $show) {
                         extract($show);

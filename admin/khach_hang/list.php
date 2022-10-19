@@ -1,4 +1,5 @@
-<div class="container mx-auto bg-yellow-500 p-24">
+<div class="bg-gray-200">
+<div class="container mx-auto p-24">
     <table class="table-auto border-separate border border-green-900">
         <thead>
             <tr>
@@ -59,4 +60,5 @@
             Nhập thêm
         </a>
     </div> -->
+</div>
 </div>

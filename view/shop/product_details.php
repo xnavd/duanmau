@@ -26,7 +26,6 @@
 
         
     </div>
-    <!-- <img src="" alt=""> -->
     <div class="description my-8">
         <div class="bg-black text-white inline-block font-semibold p-2">
             Mô tả
@@ -38,90 +37,23 @@
     </div>
     ';
         ?>
-        <!-- <div class="comment my-8">
-            <div class="bg-black text-white inline-block font-semibold p-2">
-                Bình luận
-            </div>
-            <div class="bg-[#F1F1F1] p-10">
-                <ul>
-                    <li class="my-3">
-                        <span class="font-bold text-[20px]">Tên khách hàng: </span>
-                        <span class="italic">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia hic sed dolore voluptatibus itaque temporibus esse autem reiciendis accusantium laboriosam ex, ipsum error necessitatibus ratione quis voluptatum beatae dignissimos iste.</span>
-                        <span class="font-semibold ml-2">(Ngày bình luận)</span>
-                    </li>
-                    <li class="my-3">
-                        <span class="font-bold text-[20px]">Tên khách hàng: </span>
-                        <span class="italic">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia hic sed dolore voluptatibus itaque temporibus esse autem reiciendis accusantium laboriosam ex, ipsum error necessitatibus ratione quis voluptatum beatae dignissimos iste.</span>
-                        <span class="font-semibold ml-2">(Ngày bình luận)</span>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <div class=" px-7 w-[700px] rounded-[12px] bg-white p-4">
-                    <p class="text-xl font-semibold text-blue-900 transition-all hover:text-black">Viết bình luận cho sản phẩm</p>
-                    <form action="index.php?act=add_binhluan" method="post">
-                        <textarea class="h-20 px-3 text-sm py-1 mt-5 outline-none border-pink-300 w-full resize-none border rounded-lg placeholder:text-sm" placeholder="Viết bình luận cho sản phẩm"></textarea>
-                    </form>
-                    <div class="flex justify-between mt-2">
-                        <button type="submit" class="h-12 w-[150px] bg-blue-400 text-sm text-white rounded-lg transition-all cursor-pointer hover:bg-blue-600">
-                            Gửi bình luận
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!--  -->
-        <div id="binh_luan" class="comment my-8">
-            <div class="bg-black text-white inline-block font-semibold p-2">
-                Bình luận
-            </div>
-            <div class="bg-[#F1F1F1] p-10">
-                <ul>
-                    <li class="my-3">
-                        <span class="font-bold text-[20px]">Tên khách hàng: </span>
-                        <span class="italic">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia hic sed dolore voluptatibus itaque temporibus esse autem reiciendis accusantium laboriosam ex, ipsum error necessitatibus ratione quis voluptatum beatae dignissimos iste.</span>
-                        <span class="font-semibold ml-2">(Ngày bình luận)</span>
-                    </li>
-                    <li class="my-3">
-                        <span class="font-bold text-[20px]">Tên khách hàng: </span>
-                        <span class="italic">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia hic sed dolore voluptatibus itaque temporibus esse autem reiciendis accusantium laboriosam ex, ipsum error necessitatibus ratione quis voluptatum beatae dignissimos iste.</span>
-                        <span class="font-semibold ml-2">(Ngày bình luận)</span>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <div class=" px-7 w-[700px] rounded-[12px] bg-white p-4">
-                    <p class="text-xl font-semibold text-blue-900 transition-all hover:text-black">Viết bình luận cho sản phẩm</p>
-                    <form action="index.php?act=add_binhluan" method="post">
-                        <textarea class="h-20 px-3 text-sm py-1 mt-5 outline-none border-pink-300 w-full resize-none border rounded-lg placeholder:text-sm" placeholder="Viết bình luận cho sản phẩm"></textarea>
-                    </form>
-                    <div class="flex justify-between mt-2">
-                        <!-- <button type="submit" class="h-12 w-[150px] bg-blue-400 text-sm text-white rounded-lg transition-all cursor-pointer hover:bg-blue-600">
-                            Gửi bình luận
-                        </button> -->
-
-                        <!--  -->
-                        <?php
-                        if (isset($_SESSION['log'])) {
-                            extract($_SESSION['log']);
-                        ?>
-                            <button type="submit" name="" class="h-12 w-[150px] bg-blue-400 text-sm text-white rounded-lg transition-all cursor-pointer hover:bg-blue-600">
-                                Gửi bình luận
-                            </button>
-                        <?php } else {
-                        ?>
-                            <a href="index.php?act=login" class="h-12 w-[150px] bg-blue-400 text-sm text-white rounded-lg transition-all cursor-pointer hover:bg-blue-600">
-                                Đăng nhập để bình luận
-                            </a>
-                        <?php } ?>
 
 
 
-                        <!--  -->
-                    </div>
-                </div>
-            </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#binhluan").load("../view/comment/form_cmt.php", {
+                    id_product: <?= $ma_hh ?>
+                });
+            });
+        </script>
+
+        <div id="binhluan">
+
         </div>
+
+
 </section>
 
 
