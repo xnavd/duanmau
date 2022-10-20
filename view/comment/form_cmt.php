@@ -63,7 +63,7 @@ $dsbl = load_all_binhluan($idpro);
                 <p class="text-xl font-semibold text-blue-900 transition-all hover:text-black">Viết bình luận cho sản phẩm</p>
                 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
                     <input type="hidden" name="idpro" value="<?= $idpro ?>">
-                    <input name="noidung_binhluan" class="h-20 px-3 text-sm py-1 mt-5 outline-none border-pink-300 w-full resize-none border rounded-lg placeholder:text-sm" placeholder="Viết bình luận cho sản phẩm">
+                    <input name="noidung_binhluan" required class="h-20 px-3 text-sm py-1 mt-5 outline-none border-pink-300 w-full resize-none border rounded-lg placeholder:text-sm " placeholder="Viết bình luận cho sản phẩm">
                     <div class="flex justify-between mt-2">
                         <?php
                         if (isset($_SESSION['log'])) {

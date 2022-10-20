@@ -15,7 +15,7 @@
         <form action="index.php?act=add_loaihang" method="post">
             <div>
                 <label for="" class="block text-gray-700 text-xl font-bold mb-2">Tên loại hàng:</label>
-                <input type="text" name="ten_loai" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <input type="text" name="ten_loai" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
             <br>
             <div>

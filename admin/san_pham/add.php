@@ -15,23 +15,23 @@
     <form action="index.php?act=add_sanpham" method="post" enctype="multipart/form-data">
         <div class="grid grid-cols-5 my-2">
             <label for="" class="block text-gray-700 text-xl font-bold mb-2 text-right mx-2">Tên sản phẩm</label>
-            <input type="text" name="ten_hh" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <input type="text" name="ten_hh" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
         </div>
         <div class="grid grid-cols-5 my-2">
             <label for="" class="block text-gray-700 text-xl font-bold mb-2 text-right mx-2">Đơn giá</label>
-            <input type="number" name="don_gia" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <input type="number" name="don_gia" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
         </div>
         <div class="grid grid-cols-5 my-2">
             <label for="" class="block text-gray-700 text-xl font-bold mb-2 text-right mx-2">Hình </label>
-            <input type="file" name="hinh" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <input type="file" name="hinh" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
         </div>
         <div class="grid grid-cols-5 my-2">
             <label for="" class="block text-gray-700 text-xl font-bold mb-2 text-right mx-2">Mô tả </label>
-            <textarea name="mo_ta" id="" cols="30" rows="10"></textarea>
+            <textarea name="mo_ta" id="" cols="30" rows="10" required></textarea>
         </div>
         <div class="grid grid-cols-5 my-2">
             <label for="" class="block text-gray-700 text-xl font-bold mb-2 text-right mx-2">Mô tả ngắn </label>
-            <input type="text" name="mo_ta_ngan" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <input type="text" name="mo_ta_ngan" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
         </div>
         <div class="grid grid-cols-5 my-2">
             <label for="" class="block text-gray-700 text-xl font-bold mb-2 text-right mx-2">Số lượt xem </label>
