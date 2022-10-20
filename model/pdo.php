@@ -2,7 +2,7 @@
 function pdo_get_connect()
 {
     $servername = "localhost";
-    $dbname = "dxv";
+    $dbname = "duanmau_mvc";
     $username = "root";
     $password = "";
 

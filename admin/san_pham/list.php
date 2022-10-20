@@ -22,6 +22,13 @@
                     Tìm kiếm
                 </button>
             </form>
+            <br>
+            <div>
+                <a href="index.php?act=add_sanpham" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded">
+                    Nhập thêm
+                </a>
+            </div>
+            <br> 
             <table class="table-auto border-separate border border-green-900">
                 <thead>
                     <tr>
@@ -105,10 +112,6 @@
             </table>
         </div>
         <br> <br>
-        <div>
-            <a href="index.php?act=add_sanpham" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded">
-                Nhập thêm
-            </a>
-        </div>
+
     </div>
 </div>
