@@ -53,6 +53,7 @@ if (isset($_GET['act'])) {
                 add_khachhang($ten_tk, $ho_ten, $mat_khau, $email);
 
                 $msg = "Đăng ký tài khoản thành công";
+                include "./log/login.php";
             }
             include "./log/signup.php";
             break;
@@ -78,11 +79,11 @@ if (isset($_GET['act'])) {
             //     $matkhau_old = $_POST['matkhau_old'];
 
             //         if(){
-                        
+
             //         }else{
             //             $msg = "Mật khẩu cũ không đúng";
             //         }
-        
+
 
             // }
 
@@ -115,7 +116,6 @@ if (isset($_GET['act'])) {
 
                 // $sanpham_cungloai = load_sanpham_cungloai($ma_hh, $ma_loai_sp);
                 include "./shop/pro_cate.php";
-
             } else {
                 include "home.php";
             }

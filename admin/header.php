@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&family=Martel+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="../view/img/favicon.png">
 
     <style>
         * {
